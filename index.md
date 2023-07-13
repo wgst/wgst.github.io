@@ -9,7 +9,7 @@ layout: default
 ---
 
 # Wojciech Stark
-I'm a PhD student in Computational Chemistry at the Univeristy of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the [Warsaw Univeristy of Technology](https://www.pw.edu.pl/engpw).
+I'm a PhD student in Computational Chemistry at the University of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the Warsaw Univeristy of Technology.
 
 
 ## Research
