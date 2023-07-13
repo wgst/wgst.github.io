@@ -12,17 +12,14 @@ layout: default
 I'm a PhD student in Computational Chemistry at the Univeristy of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the [Warsaw Univeristy of Technology](https://www.pw.edu.pl/engpw).
 
 
-<!-- ## Research
-
-* I'm currently working on  -->
+## Research
+I'm currently working on developing ML-based models that enable simulating adiabatic and nonadiabatic molecular dynamics of hydrogen molecules at different copper surfaces.
 
 
 ## Links
 * [Google Scholar](https://scholar.google.com/citations?user=KiNdem8AAAAJ&hl=en)
 * [Github](https://github.com/wgst)
 * [Twitter](https://twitter.com/wgstark)
-* [ORCiD](https://orcid.org/0000-0001-6279-2638)
-* [Group webpage](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/people/wojciech_stark/)
 
 ## Contact
 **wojciech.stark@warwick.ac.uk**.
