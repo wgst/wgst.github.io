@@ -20,6 +20,3 @@ I'm currently working on developing ML-based models that enable simulating adiab
 * [Google Scholar](https://scholar.google.com/citations?user=KiNdem8AAAAJ&hl=en)
 * [Github](https://github.com/wgst)
 * [Twitter](https://twitter.com/wgstark)
-
-## Contact
-**wojciech.stark@warwick.ac.uk**.
