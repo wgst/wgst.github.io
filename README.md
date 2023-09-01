@@ -1,2 +1,2 @@
-## github page for wgst.github.io
+## Repo for wgst.github.io webpage
 
