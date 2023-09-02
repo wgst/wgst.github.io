@@ -7,9 +7,9 @@
 #
 layout: default
 ---
-img {
+<!-- img {
   border-radius: 80%;
-}
+} -->
 <img src="https://wgst.github.io/assets/wgst-gc.png" width="200"> 
 
 # Wojciech Stark
