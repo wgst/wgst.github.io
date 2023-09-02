@@ -13,7 +13,7 @@ I'm a PhD student in Computational Chemistry at the University of Warwick ([Comp
 
 
 ## Research
-I'm developing ML-based models for gas-surface dynamics, for both adiabatic (within Born-Oppenheimer approximation) and non-adiabatic (beyond Born-Oppenheimer approximation) approaches.
+I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches.
 
 
 ## Links
