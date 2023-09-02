@@ -7,7 +7,9 @@
 #
 layout: default
 ---
-
+img {
+  border-radius: 80%;
+}
 <img src="https://wgst.github.io/assets/wgst-gc.png" width="200"> 
 
 # Wojciech Stark
@@ -22,4 +24,4 @@ I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Bor
 * [Google Scholar](https://scholar.google.com/citations?user=KiNdem8AAAAJ&hl=en)
 * [Github](https://github.com/wgst)
 * [Twitter](https://twitter.com/wgstark)
-* [ML in gas-surface: tutorial](https://wgst.github.io/ml-gas-surface)
+* [ML in Gas-Surface: tutorial](https://wgst.github.io/ml-gas-surface)
