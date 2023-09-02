@@ -8,7 +8,7 @@
 layout: default
 ---
 
-![me](assetss/wgst-gc.png)
+![me](assets/wgst-gc.png)
 
 # Wojciech Stark
 I'm a PhD student in Computational Chemistry at the University of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the Warsaw University of Technology.
