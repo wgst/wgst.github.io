@@ -9,7 +9,7 @@ layout: default
 ---
 
 
-<img src="https://wgst.github.io/assets/wgst-gc.png" width="180"> 
+<img src="https://wgst.github.io/assets/wgst-gc.png" width="180" class="image_cir"> 
 
 # Wojciech Stark
 I'm a PhD student in Computational Chemistry at the University of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the Warsaw University of Technology.
@@ -18,7 +18,7 @@ I'm a PhD student in Computational Chemistry at the University of Warwick ([Comp
 ## Research
 I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches.
 
-<img src="https://wgst.github.io/assets/wgst-gc.png"> 
+<img src="https://wgst.github.io/assets/sticking_cu111_ad2.png" class="image_sq"> 
 
 ## Links
 * [Google Scholar](https://scholar.google.com/citations?user=KiNdem8AAAAJ&hl=en)
