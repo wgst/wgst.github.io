@@ -10,7 +10,7 @@ layout: default
 
 <img src="https://wgst.github.io/assets/wgst-gc.png" width="180" class="image_cir"> 
 
-# Wojciech Stark <a href="https://orcid.org/0000-0001-6279-2638"> <img src="https://wgst.github.io/assets/orcid.png" alt="ORCiD logo" width="25"height="25"></a>
+# Wojciech Stark
 
 I'm a PhD student in Computational Chemistry at the University of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the Warsaw University of Technology.
 
@@ -25,3 +25,4 @@ I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Bor
 * [Github](https://github.com/wgst)
 * [ML in Gas-Surface: tutorial](https://wgst.github.io/ml-gas-surface)
 * [Twitter](https://twitter.com/wgstark)
+* [ORCiD](https://orcid.org/0000-0001-6279-2638)
