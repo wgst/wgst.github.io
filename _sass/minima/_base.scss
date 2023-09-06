@@ -65,10 +65,21 @@ main {
  */
 img {
   max-width: 100%;
+  // vertical-align: middle;
+  // border-radius: 80%;
+}
+
+.image_sq {
+  max-width: 100%;
+  // vertical-align: middle;
+  // border-radius: 80%;
+}
+
+.image_cir {
+  max-width: 100%;
   vertical-align: middle;
   border-radius: 80%;
 }
-
 
 
 /**
