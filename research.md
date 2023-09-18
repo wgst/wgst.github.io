@@ -4,11 +4,10 @@ title: research
 permalink: /research/
 ---
 
-## Research
-
-I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches.
+I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches. This includes building ML-based interatomic potentials and electronic friction models for local density friction approximation (LDFA), where we model the metal surface density and orbital dependent friction (ODF), in which we model entire electronic friction tensor.
 
 <img src="https://wgst.github.io/assets/sticking_cu111_non.png" width="340" class="image_sq"> 
+
 
 ### List of publications
 * (preprint) **W. G. Stark**, J. Westermayr, O. A. Douglas-Gallardo, J. Gardner, S. Habershon, R. J. Maurer, Machine learning interatomic potentials for gas-surface dynamics based on iterative refinement and error control of dynamic reaction probabilities, arXiv:2305.10873 [[arXiv]](https://arxiv.org/abs/2305.10873) [[tutorial]](https://wgst.github.io/ml-gas-surface)
