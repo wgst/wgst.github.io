@@ -10,9 +10,9 @@ I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Bor
 
 
 ### List of publications
-* W. G. Stark, C. van der Oord, I. Batatia, Y. Zhang, B. Jiang, G. Csányi, and R. J. Maurer, Benchmarking of machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces, arXiv:2403.15334 [physics.chem-ph] (2024) [[arXiv]](https://arxiv.org/abs/2403.15334)
+* **W. G. Stark**, C. van der Oord, I. Batatia, Y. Zhang, B. Jiang, G. Csányi, and R. J. Maurer, Benchmarking of machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces, arXiv:2403.15334 [physics.chem-ph] (2024) [[arXiv]](https://arxiv.org/abs/2403.15334)
 
-* W. G. Stark, J. Westermayr, O. A. Douglas-Gallardo, J. Gardner, S. Habershon, R. J. Maurer, Machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces based on iterative refinement of reaction probabilities, J. Phys. Chem. C, 127, 50, 24168–24182 (2023) [[arXiv]](https://arxiv.org/abs/2305.10873) [[journal]](https://pubs.acs.org/doi/10.1021/acs.jpcc.3c06648)
+* **W. G. Stark**, J. Westermayr, O. A. Douglas-Gallardo, J. Gardner, S. Habershon, R. J. Maurer, Machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces based on iterative refinement of reaction probabilities, J. Phys. Chem. C, 127, 50, 24168–24182 (2023) [[arXiv]](https://arxiv.org/abs/2305.10873) [[journal]](https://pubs.acs.org/doi/10.1021/acs.jpcc.3c06648)
 
 * C. L. Box, **W. G. Stark**, R. J. Maurer, Ab initio calculation of electron-phonon linewidths and molecular dynamics with electronic friction at metal surfaces with numeric atom-centered orbitals, Electron. Struct. 5, 035005 (2023) [[arXiv]](https://arxiv.org/abs/2112.00121) [[journal]](https://iopscience.iop.org/article/10.1088/2516-1075/acf3c4)
 
