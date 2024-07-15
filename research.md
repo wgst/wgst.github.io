@@ -10,7 +10,7 @@ I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Bor
 
 
 ### List of publications
-* **W. G. Stark**, C. van der Oord, I. Batatia, Y. Zhang, B. Jiang, G. Csányi, and R. J. Maurer, Benchmarking of machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces, arXiv:2403.15334 [physics.chem-ph] (2024) [[arXiv]](https://arxiv.org/abs/2403.15334)
+* **W. G. Stark**, C. van der Oord, I. Batatia, Y. Zhang, B. Jiang, G. Csányi, and R. J. Maurer, Benchmarking of machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces, Mach. Learn.: Sci. Technol., 5, 3, 030501 (2024) [[arXiv]](https://arxiv.org/abs/2403.15334) [[journal]](http://doi.org/10.1088/2632-2153/ad5f11)
 
 * **W. G. Stark**, J. Westermayr, O. A. Douglas-Gallardo, J. Gardner, S. Habershon, R. J. Maurer, Machine learning interatomic potentials for reactive hydrogen dynamics at metal surfaces based on iterative refinement of reaction probabilities, J. Phys. Chem. C, 127, 50, 24168–24182 (2023) [[arXiv]](https://arxiv.org/abs/2305.10873) [[journal]](https://pubs.acs.org/doi/10.1021/acs.jpcc.3c06648)
 
