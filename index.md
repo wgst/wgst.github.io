@@ -12,7 +12,7 @@ layout: default
 
 # Wojciech Stark
 
-I'm a PhD student in Computational Chemistry at the University of Warwick ([Computational Surface Science Group](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I obtained my BSc and MSc in Chemistry from the Warsaw University of Technology.
+I'm a Research Assistant at the University of Warwick ([Computational Surface Science Group (Maurer group)](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)). I recently defended my PhD thesis titled "Machine Learning Models for Gas-Surface Dynamics" (in the same group). I obtained my BSc and MSc in Chemistry from the Warsaw University of Technology.
 
 
 ## Research
