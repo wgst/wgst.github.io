@@ -23,5 +23,7 @@ I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Bor
 Find the full publication list on [google scholar](https://scholar.google.com/citations?user%253DKiNdem8AAAAJ)!
 
 
-My MSc project (Design of Experiments program written in C#):
-[do-exp.com](http://do-exp.com/)
+### Other contributions
+* Adaptive sampling (active learning) for gas-surface dynamics - Tutorial: [ml-gas-surface](https://wgst.github.io/ml-gas-surface)
+* Program for optimising chemical processes, based on design of experiments - Do-Exp (MSc project):
+[do-exp.com](http://do-exp.com)
