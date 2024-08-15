@@ -4,7 +4,7 @@ title: research
 permalink: /research/
 ---
 
-I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches. This includes building ML-based interatomic potentials and electronic friction models for local density friction approximation (LDFA), where we model the metal surface density and orbital dependent friction (ODF), in which we model the entire electronic friction tensor.
+I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches. This includes developing adaptive sampling (active learning) workflows to construct accurate and efficient ML-based interatomic potentials and electronic friction models (for predicting density and electronic friction tensors).
 
 <img src="https://wgst.github.io/assets/sticking_cu111_non.png" width="340" class="image_sq"> 
 
