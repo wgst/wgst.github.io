@@ -758,7 +758,7 @@ table td {
   }
 }
 body {
-  background-image: url("/assets/pattern.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("/assets/pattern.png");
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: auto;
@@ -766,10 +766,20 @@ body {
 
 .wrapper {
   background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 100px;
+  padding-top: 30px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .site-header, .site-footer {
+  background-color: transparent;
+  border: none;
+}
+
+.site-header .wrapper, .site-footer .wrapper {
   background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=style.css.map */

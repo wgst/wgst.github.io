@@ -8,7 +8,9 @@
 
 // Custom background pattern - only on sides, not in content area
 body {
-  background-image: url('/assets/pattern.png'); // Replace 'pattern.png' with your image filename
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), // white overlay (0.3=medium, 0.4=more white, 0.2=subtle)
+    url('/assets/pattern.png');
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: auto; // or specify size like '200px 200px' for tiling
@@ -17,9 +19,20 @@ body {
 // Dimmed background in content area - adjust opacity (0.95 = barely visible, 0.5 = more visible)
 .wrapper {
   background-color: rgba(255, 255, 255, 0.95); // white with 95% opacity = pattern barely visible
+  border-radius: 100px; // rounded corners (adjust value: 5px=subtle, 15px=more round, 20px=very round)
+  padding-top: 30px; // add spacing inside the box at the top
+  border: 2px solid rgba(0, 0, 0, 0.1); // add border (adjust: 1px=thin, 3px=thicker; 0.1=subtle, 0.2=darker)
 }
 
 // Also apply to header and footer
 .site-header, .site-footer {
+  background-color: transparent; // make outer container transparent
+  border: none; // remove border from outer container
+}
+
+// Style only the wrapper inside header and footer
+.site-header .wrapper, .site-footer .wrapper {
   background-color: rgba(255, 255, 255, 0.90);
+  border-radius: 50px; // rounded corners
+  border: 2px solid rgba(0, 0, 0, 0.1); // add border to header and footer
 }
