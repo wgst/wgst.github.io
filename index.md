@@ -5,17 +5,27 @@
 # To change the home page layout, edit the _layouts/home.html file.
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 #
-layout: default
+layout: home
 ---
 
 <img src="https://wgst.github.io/assets/wgst-gc.png" width="180" class="image_cir"> 
 
 # Wojciech Stark
 
-I'm a Research Associate at Imperial College London ([AIchemy hub](https://aichemy.ac.uk)). I obtained PhD at the University of Warwick ([Computational Surface Science Group (Maurer group)](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)) with the thesis titled "Machine Learning Models for Gas-Surface Dynamics". Before that, I studied at the Warsaw University of Technology (BSc and MSc).
+I'm a Research Associate at Imperial College London ([AIchemy hub](https://aichemy.ac.uk)). I obtained my PhD at the University of Warwick ([Computational Surface Science Group (Maurer group)](https://warwick.ac.uk/fac/sci/chemistry/research/maurer/maurergroup/)) with the thesis titled "Machine Learning Models for Gas-Surface Dynamics". Before that, I studied at the Warsaw University of Technology (BSc and MSc).
 
 ## Research
-I'm developing ML-based models for gas-surface dynamics, for both adiabatic (Born-Oppenheimer molecular dynamics) and non-adiabatic (molecular dynamics with electronic friction) approaches.
+
+### Bayesian Optimization and Property Models
+I'm currently working on discovering new catalysts and optimizing reaction conditions using Bayesian optimization.
+
+### Machine Learning Interatomic Potentials
+Another part of my research involves developing workflows and methods for training highly accurate and efficient machine learning interatomic potentials (MLIPs) at the lowest possible computational cost.
+
+### Nonadiabatic Effects in Gas-Surface Dynamics
+During my PhD, I developed machine learning models to capture nonadiabatic effects in gas-surface dynamics, particularly for studying hydrogen molecule state-to-state scattering at metal surfaces.
+
+
 
 <img src="https://wgst.github.io/assets/sticking_cu111.png" width="340" class="image_sq"> 
 

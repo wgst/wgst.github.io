@@ -5,3 +5,21 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+// Custom background pattern - only on sides, not in content area
+body {
+  background-image: url('/assets/pattern.png'); // Replace 'pattern.png' with your image filename
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: auto; // or specify size like '200px 200px' for tiling
+}
+
+// Dimmed background in content area - adjust opacity (0.95 = barely visible, 0.5 = more visible)
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.95); // white with 95% opacity = pattern barely visible
+}
+
+// Also apply to header and footer
+.site-header, .site-footer {
+  background-color: rgba(255, 255, 255, 0.90);
+}
