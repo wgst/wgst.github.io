@@ -20,7 +20,8 @@ body {
 .wrapper {
   background-color: rgba(255, 255, 255, 0.95); // white with 95% opacity = pattern barely visible
   border-radius: 100px; // rounded corners (adjust value: 5px=subtle, 15px=more round, 20px=very round)
-  padding-top: 30px; // add spacing inside the box at the top
+  padding-top: 40px; // add spacing inside the box at the top
+  padding-bottom: 20px; // add spacing inside the box at the bottom
   border: 2px solid rgba(0, 0, 0, 0.1); // add border (adjust: 1px=thin, 3px=thicker; 0.1=subtle, 0.2=darker)
 }
 
@@ -35,4 +36,15 @@ body {
   background-color: rgba(255, 255, 255, 0.90);
   border-radius: 50px; // rounded corners
   border: 2px solid rgba(0, 0, 0, 0.1); // add border to header and footer
+}
+
+// Center navigation links vertically in header
+.site-nav {
+  display: flex;
+  align-items: center; // vertically center the navigation
+}
+
+.site-title {
+  display: flex;
+  align-items: center; // vertically center the title too
 }
