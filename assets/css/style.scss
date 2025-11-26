@@ -9,11 +9,11 @@
 // Custom background pattern - only on sides, not in content area
 body {
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), // white overlay (0.3=medium, 0.4=more white, 0.2=subtle)
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), // white overlay (0.3=medium, 0.4=more white, 0.2=subtle)
     url('/assets/pattern.png');
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: auto; // or specify size like '200px 200px' for tiling
+  background-size: 1600px 1600px; // or specify size like '200px 200px' for tiling
 }
 
 // Dimmed background in content area - adjust opacity (0.95 = barely visible, 0.5 = more visible)
@@ -36,15 +36,37 @@ body {
   background-color: rgba(255, 255, 255, 0.90);
   border-radius: 50px; // rounded corners
   border: 2px solid rgba(0, 0, 0, 0.1); // add border to header and footer
+  display: flex;
+  align-items: center; // vertically center all content in header
+  justify-content: space-between; // push title left and nav right
 }
 
 // Center navigation links vertically in header
 .site-nav {
   display: flex;
   align-items: center; // vertically center the navigation
+  top: 0 !important; // remove default positioning
+  right: 0 !important; // force to right edge
+  transform: none !important; // remove transform
+  position: static !important; // use normal flow positioning
+  margin-left: auto; // push to the right
+  background-color: transparent !important; // remove background
+  border: none !important; // remove border
 }
 
 .site-title {
   display: flex;
   align-items: center; // vertically center the title too
+  line-height: 1; // normalize line height for better centering
+  margin-bottom: 0 !important; // remove any bottom margin
+  margin-right: auto; // push to the left
+  padding-top: 0 !important; // remove any top padding
+  padding-bottom: 0 !important; // remove any bottom padding
+}
+
+// Align navigation links on same line as title
+.site-nav .page-link {
+  line-height: 1; // match title line height
+  padding-top: 0; // remove top padding
+  padding-bottom: 0; // remove bottom padding
 }

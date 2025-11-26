@@ -758,10 +758,10 @@ table td {
   }
 }
 body {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("/assets/pattern.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/assets/pattern.png");
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: auto;
+  background-size: 1600px 1600px;
 }
 
 .wrapper {
@@ -781,16 +781,37 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50px;
   border: 2px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-nav {
   display: flex;
   align-items: center;
+  top: 0 !important;
+  right: 0 !important;
+  transform: none !important;
+  position: static !important;
+  margin-left: auto;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 .site-title {
   display: flex;
   align-items: center;
+  line-height: 1;
+  margin-bottom: 0 !important;
+  margin-right: auto;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.site-nav .page-link {
+  line-height: 1;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
