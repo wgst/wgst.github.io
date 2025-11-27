@@ -8,13 +8,234 @@
 
 // Custom background pattern - only on sides, not in content area
 body {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), // white overlay (0.3=medium, 0.4=more white, 0.2=subtle)
-    url('/assets/pattern.png');
+  // background-image: 
+  //   linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), // white overlay (0.3=medium, 0.4=more white, 0.2=subtle)
+  //   url('/assets/pattern.png');
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 1600px 1600px; // or specify size like '200px 200px' for tiling
+  position: relative;
+  overflow-x: hidden; // prevent horizontal scroll from animated balls
 }
+
+// Disabled CSS animation - now using JavaScript interactive balls
+// Create animated floating balls in background
+/*
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; // allow clicking through to content
+  z-index: -1; // behind all content
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9) 0%, rgba(152, 164, 189, 0.8) 65%, transparent 38%);
+  background-size: 
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px, 80px 80px,
+    80px 80px;
+  background-repeat: no-repeat;
+  background-position:
+    5% 5%, 14% 5%, 23% 5%, 32% 5%, 41% 5%, 50% 5%, 59% 5%, 68% 5%, 77% 5%, 86% 5%, 95% 5%,
+    9.5% 14%, 18.5% 14%, 27.5% 14%, 36.5% 14%, 45.5% 14%, 54.5% 14%, 63.5% 14%, 72.5% 14%, 81.5% 14%, 90.5% 14%,
+    5% 23%, 14% 23%, 23% 23%, 32% 23%, 41% 23%, 50% 23%, 59% 23%, 68% 23%, 77% 23%, 86% 23%, 95% 23%,
+    9.5% 32%, 18.5% 32%, 27.5% 32%, 36.5% 32%, 45.5% 32%, 54.5% 32%, 63.5% 32%, 72.5% 32%, 81.5% 32%, 90.5% 32%,
+    5% 41%, 14% 41%, 23% 41%, 32% 41%, 41% 41%, 50% 41%, 59% 41%, 68% 41%, 77% 41%, 86% 41%, 95% 41%,
+    9.5% 50%, 18.5% 50%, 27.5% 50%, 36.5% 50%, 45.5% 50%, 54.5% 50%, 63.5% 50%, 72.5% 50%, 81.5% 50%, 90.5% 50%,
+    5% 59%, 14% 59%, 23% 59%, 32% 59%, 41% 59%, 50% 59%, 59% 59%, 68% 59%, 77% 59%, 86% 59%, 95% 59%,
+    9.5% 68%, 18.5% 68%, 27.5% 68%, 36.5% 68%, 45.5% 68%, 54.5% 68%, 63.5% 68%, 72.5% 68%, 81.5% 68%, 90.5% 68%,
+    5% 77%, 14% 77%, 23% 77%, 32% 77%, 41% 77%, 50% 77%, 59% 77%, 68% 77%, 77% 77%, 86% 77%, 95% 77%,
+    9.5% 86%, 18.5% 86%, 27.5% 86%, 36.5% 86%, 45.5% 86%, 54.5% 86%, 63.5% 86%, 72.5% 86%, 81.5% 86%, 90.5% 86%,
+    5% 95%, 14% 95%, 23% 95%, 32% 95%, 41% 95%, 50% 95%, 59% 95%, 68% 95%, 77% 95%, 86% 95%, 95% 95%;
+  animation: floatBalls 40s ease-in-out infinite;
+}
+
+@keyframes floatBalls {
+  0%, 100% {
+    background-position:
+      5% 5%, 14% 5%, 23% 5%, 32% 5%, 41% 5%, 50% 5%, 59% 5%, 68% 5%, 77% 5%, 86% 5%, 95% 5%,
+      9.5% 14%, 18.5% 14%, 27.5% 14%, 36.5% 14%, 45.5% 14%, 54.5% 14%, 63.5% 14%, 72.5% 14%, 81.5% 14%, 90.5% 14%,
+      5% 23%, 14% 23%, 23% 23%, 32% 23%, 41% 23%, 50% 23%, 59% 23%, 68% 23%, 77% 23%, 86% 23%, 95% 23%,
+      9.5% 32%, 18.5% 32%, 27.5% 32%, 36.5% 32%, 45.5% 32%, 54.5% 32%, 63.5% 32%, 72.5% 32%, 81.5% 32%, 90.5% 32%,
+      5% 41%, 14% 41%, 23% 41%, 32% 41%, 41% 41%, 50% 41%, 59% 41%, 68% 41%, 77% 41%, 86% 41%, 95% 41%,
+      9.5% 50%, 18.5% 50%, 27.5% 50%, 36.5% 50%, 45.5% 50%, 54.5% 50%, 63.5% 50%, 72.5% 50%, 81.5% 50%, 90.5% 50%,
+      5% 59%, 14% 59%, 23% 59%, 32% 59%, 41% 59%, 50% 59%, 59% 59%, 68% 59%, 77% 59%, 86% 59%, 95% 59%,
+      9.5% 68%, 18.5% 68%, 27.5% 68%, 36.5% 68%, 45.5% 68%, 54.5% 68%, 63.5% 68%, 72.5% 68%, 81.5% 68%, 90.5% 68%,
+      5% 77%, 14% 77%, 23% 77%, 32% 77%, 41% 77%, 50% 77%, 59% 77%, 68% 77%, 77% 77%, 86% 77%, 95% 77%,
+      9.5% 86%, 18.5% 86%, 27.5% 86%, 36.5% 86%, 45.5% 86%, 54.5% 86%, 63.5% 86%, 72.5% 86%, 81.5% 86%, 90.5% 86%,
+      5% 95%, 14% 95%, 23% 95%, 32% 95%, 41% 95%, 50% 95%, 59% 95%, 68% 95%, 77% 95%, 86% 95%, 95% 95%;
+  }
+  20% {
+    background-position:
+      4% 6%, 13% 4%, 24% 6%, 31% 4%, 42% 6%, 49% 4%, 60% 6%, 67% 4%, 78% 6%, 85% 4%, 96% 6%,
+      8.5% 15%, 17.5% 13%, 28.5% 15%, 35.5% 13%, 46.5% 15%, 53.5% 13%, 64.5% 15%, 71.5% 13%, 82.5% 15%, 89.5% 13%,
+      4% 24%, 13% 22%, 24% 24%, 31% 22%, 42% 24%, 49% 22%, 60% 24%, 67% 22%, 78% 24%, 85% 22%, 96% 24%,
+      8.5% 33%, 17.5% 31%, 28.5% 33%, 35.5% 31%, 46.5% 33%, 53.5% 31%, 64.5% 33%, 71.5% 31%, 82.5% 33%, 89.5% 31%,
+      4% 42%, 13% 40%, 24% 42%, 31% 40%, 42% 42%, 49% 40%, 60% 42%, 67% 40%, 78% 42%, 85% 40%, 96% 42%,
+      8.5% 51%, 17.5% 49%, 28.5% 51%, 35.5% 49%, 46.5% 51%, 53.5% 49%, 64.5% 51%, 71.5% 49%, 82.5% 51%, 89.5% 49%,
+      4% 60%, 13% 58%, 24% 60%, 31% 58%, 42% 60%, 49% 58%, 60% 60%, 67% 58%, 78% 60%, 85% 58%, 96% 60%,
+      8.5% 69%, 17.5% 67%, 28.5% 69%, 35.5% 67%, 46.5% 69%, 53.5% 67%, 64.5% 69%, 71.5% 67%, 82.5% 69%, 89.5% 67%,
+      4% 78%, 13% 76%, 24% 78%, 31% 76%, 42% 78%, 49% 76%, 60% 78%, 67% 76%, 78% 78%, 85% 76%, 96% 78%,
+      8.5% 87%, 17.5% 85%, 28.5% 87%, 35.5% 85%, 46.5% 87%, 53.5% 85%, 64.5% 87%, 71.5% 85%, 82.5% 87%, 89.5% 85%,
+      4% 96%, 13% 94%, 24% 96%, 31% 94%, 42% 96%, 49% 94%, 60% 96%, 67% 94%, 78% 96%, 85% 94%, 96% 96%;
+  }
+  50% {
+    background-position:
+      3% 12%, 88% 18%, 47% 82%, 72% 58%, 18% 68%, 58% 3%, 12% 78%, 93% 28%, 38% 48%, 68% 73%, 15% 92%,
+      22% 38%, 78% 83%, 32% 22%, 62% 8%, 12% 53%, 52% 88%, 92% 43%, 28% 63%, 42% 33%, 73% 48%,
+      8% 23%, 83% 63%, 40% 15%, 56% 80%, 20% 46%, 76% 36%, 10% 70%, 86% 53%, 30% 26%, 66% 66%, 95% 42%,
+      46% 10%, 50% 76%, 16% 60%, 80% 20%, 36% 86%, 82% 45%, 14% 25%, 54% 90%, 70% 32%, 24% 55%,
+      90% 65%, 26% 12%, 60% 85%, 34% 40%, 75% 20%, 44% 75%, 6% 35%, 64% 6%, 48% 92%, 85% 50%, 18% 8%,
+      15% 82%, 55% 15%, 95% 55%, 38% 70%, 68% 25%, 25% 50%, 58% 95%, 20% 40%, 78% 10%, 42% 65%,
+      88% 35%, 32% 78%, 52% 25%, 12% 88%, 72% 55%, 5% 45%, 62% 12%, 35% 60%, 80% 75%, 50% 30%, 92% 18%,
+      10% 58%, 70% 92%, 45% 7%, 85% 62%, 25% 85%, 60% 38%, 33% 52%, 75% 12%, 15% 72%, 55% 88%, 90% 25%,
+      8% 95%, 48% 68%, 82% 35%, 27% 18%, 65% 78%, 40% 42%, 88% 8%, 18% 48%, 58% 22%, 92% 75%, 35% 95%,
+      72% 68%, 12% 32%, 50% 55%, 85% 88%, 22% 15%, 68% 5%, 38% 82%, 78% 45%, 5% 65%, 48% 18%, 92% 58%,
+      30% 72%, 62% 28%, 95% 92%, 42% 38%, 75% 58%, 15% 22%, 55% 75%, 25% 45%, 82% 15%, 38% 88%, 68% 32%;
+  }
+  80% {
+    background-position:
+      6% 4%, 15% 6%, 22% 4%, 33% 6%, 40% 4%, 51% 6%, 58% 4%, 69% 6%, 76% 4%, 87% 6%, 94% 4%,
+      10.5% 13%, 19.5% 15%, 26.5% 13%, 37.5% 15%, 44.5% 13%, 55.5% 15%, 62.5% 13%, 73.5% 15%, 80.5% 13%, 91.5% 15%,
+      6% 22%, 15% 24%, 22% 22%, 33% 24%, 40% 22%, 51% 24%, 58% 22%, 69% 24%, 76% 22%, 87% 24%, 94% 22%,
+      10.5% 31%, 19.5% 33%, 26.5% 31%, 37.5% 33%, 44.5% 31%, 55.5% 33%, 62.5% 31%, 73.5% 33%, 80.5% 31%, 91.5% 33%,
+      6% 40%, 15% 42%, 22% 40%, 33% 42%, 40% 40%, 51% 42%, 58% 40%, 69% 42%, 76% 40%, 87% 42%, 94% 40%,
+      10.5% 49%, 19.5% 51%, 26.5% 49%, 37.5% 51%, 44.5% 49%, 55.5% 51%, 62.5% 49%, 73.5% 51%, 80.5% 49%, 91.5% 51%,
+      6% 58%, 15% 60%, 22% 58%, 33% 60%, 40% 58%, 51% 60%, 58% 58%, 69% 60%, 76% 58%, 87% 60%, 94% 58%,
+      10.5% 67%, 19.5% 69%, 26.5% 67%, 37.5% 69%, 44.5% 67%, 55.5% 69%, 62.5% 67%, 73.5% 69%, 80.5% 67%, 91.5% 69%,
+      6% 76%, 15% 78%, 22% 76%, 33% 78%, 40% 76%, 51% 78%, 58% 76%, 69% 78%, 76% 76%, 87% 78%, 94% 76%,
+      10.5% 85%, 19.5% 87%, 26.5% 85%, 37.5% 87%, 44.5% 85%, 55.5% 87%, 62.5% 85%, 73.5% 87%, 80.5% 85%, 91.5% 87%,
+      6% 94%, 15% 96%, 22% 94%, 33% 96%, 40% 94%, 51% 96%, 58% 94%, 69% 96%, 76% 94%, 87% 96%, 94% 94%;
+  }
+}
+*/
 
 // Dimmed background in content area - adjust opacity (0.95 = barely visible, 0.5 = more visible)
 .wrapper {
@@ -23,6 +244,8 @@ body {
   padding-top: 40px; // add spacing inside the box at the top
   padding-bottom: 20px; // add spacing inside the box at the bottom
   border: 2px solid rgba(0, 0, 0, 0.1); // add border (adjust: 1px=thin, 3px=thicker; 0.1=subtle, 0.2=darker)
+  position: relative;
+  z-index: 1; // ensure content appears above interactive balls
 }
 
 // Also apply to header and footer
