@@ -758,6 +758,7 @@ table td {
   }
 }
 body {
+  background-color: #2c304b;
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 1600px 1600px;

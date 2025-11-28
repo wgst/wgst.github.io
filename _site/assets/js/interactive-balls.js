@@ -100,6 +100,13 @@
   }
   
   // Create individual ball
+      // background: radial-gradient(circle at 30% 30%, 
+      //   #ffffff 0%, 
+      //   #e8ebf0 15%,
+      //   #d8dde8 35%,
+      //   #c8d0df 60%,
+      //   #b8c3d4 80%,
+      //   #a8b6c9 100%);
   function createBall(index) {
     const ball = document.createElement('div');
     ball.className = 'interactive-ball';
@@ -110,12 +117,12 @@
       height: ${ballSize}px;
       border-radius: 50%;
       background: radial-gradient(circle at 30% 30%, 
-        #ffffff 0%, 
-        #e8ebf0 15%,
-        #d8dde8 35%,
-        #c8d0df 60%,
-        #b8c3d4 80%,
-        #a8b6c9 100%);
+        #a0a0a0ff 0%, 
+        #485772ff 15%,
+        #323f5aff 35%,
+        #233149ff 60%,
+        #101825ff 80%,
+        #192535ff 100%);
       box-shadow: 
         inset -10px -10px 20px rgba(0, 0, 0, 0.08),
         inset 8px 8px 15px rgba(255, 255, 255, 0.5),

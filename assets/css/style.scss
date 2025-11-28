@@ -11,11 +11,12 @@ body {
   // background-image: 
   //   linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), // white overlay (0.3=medium, 0.4=more white, 0.2=subtle)
   //   url('/assets/pattern.png');
+  background-color: #2c304b;
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 1600px 1600px; // or specify size like '200px 200px' for tiling
   position: relative;
-  overflow-x: hidden; // prevent horizontal scroll from animated balls
+  overflow-x: hidden; // preven2t horizontal scroll from animated balls
 }
 
 // Disabled CSS animation - now using JavaScript interactive balls
