@@ -251,20 +251,20 @@ body::before {
 
 // Also apply to header and footer
 .site-header, .site-footer {
-  background-color: transparent; // make outer container transparent
-  border: none; // remove border from outer container
-  pointer-events: none; // allow clicking through to balls behind
+  background-color: transparent !important; // make outer container transparent
+  border: none !important; // remove border from outer container
+  pointer-events: none !important; // allow clicking through to balls behind
 }
 
 // Style only the wrapper inside header and footer
 .site-header .wrapper, .site-footer .wrapper {
-  background-color: rgba(255, 255, 255, 0.90);
-  border-radius: 50px; // rounded corners
-  border: 2px solid rgba(0, 0, 0, 0.1); // add border to header and footer
-  display: flex;
-  align-items: center; // vertically center all content in header
-  justify-content: space-between; // push title left and nav right
-  pointer-events: auto; // re-enable pointer events on the actual content
+  background-color: rgba(255, 255, 255, 0.90) !important;
+  border-radius: 50px !important; // rounded corners
+  border: 2px solid rgba(0, 0, 0, 0.1) !important; // add border to header and footer
+  display: flex !important;
+  align-items: center !important; // vertically center all content in header
+  justify-content: space-between !important; // push title left and nav right
+  pointer-events: auto !important; // re-enable pointer events on the actual content
 }
 
 // Center navigation links vertically in header

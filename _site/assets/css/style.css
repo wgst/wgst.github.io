@@ -993,19 +993,19 @@ body::before {
 }
 
 .site-header, .site-footer {
-  background-color: transparent;
-  border: none;
-  pointer-events: none;
+  background-color: transparent !important;
+  border: none !important;
+  pointer-events: none !important;
 }
 
 .site-header .wrapper, .site-footer .wrapper {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 50px;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: auto;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50px !important;
+  border: 2px solid rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  pointer-events: auto !important;
 }
 
 .site-nav {
