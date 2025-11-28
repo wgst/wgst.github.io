@@ -253,6 +253,7 @@ body::before {
 .site-header, .site-footer {
   background-color: transparent; // make outer container transparent
   border: none; // remove border from outer container
+  pointer-events: none; // allow clicking through to balls behind
 }
 
 // Style only the wrapper inside header and footer
@@ -263,6 +264,7 @@ body::before {
   display: flex;
   align-items: center; // vertically center all content in header
   justify-content: space-between; // push title left and nav right
+  pointer-events: auto; // re-enable pointer events on the actual content
 }
 
 // Center navigation links vertically in header

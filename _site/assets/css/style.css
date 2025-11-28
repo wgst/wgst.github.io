@@ -995,6 +995,7 @@ body::before {
 .site-header, .site-footer {
   background-color: transparent;
   border: none;
+  pointer-events: none;
 }
 
 .site-header .wrapper, .site-footer .wrapper {
@@ -1004,6 +1005,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  pointer-events: auto;
 }
 
 .site-nav {
